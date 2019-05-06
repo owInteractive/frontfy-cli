@@ -40,8 +40,8 @@ The init method contains some questions after calling:
 | Question | Description |
 | ------------- |-----|
 | Do you like to create a repository in Bitbucket? | Y/n |
-| Who is the owner of the project? | Project owner on Bitbucket |
-| Enter with your key and secret: | To authorize the repository creation at Bitbucket we need your OAuth Key/Secret. If you don't have one go to Bitbucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. Inside the page set: name, callback URL to: http://localhost:3301/oauth-callback and give permission to Repositories (Write and Admin). Save and go ahead! |
+| Who is the owner of the project? | Project owner on Bitbucket. Default is *owinteractive* the owner of Frontfy. |
+| Enter with your key and secret: | To authorize the repository creation at Bitbucket we need your OAuth Key/Secret. See more in the section **Configuration -  OAuth Consumer**. |
 
 #### Run the project
 | Question | Description |
@@ -87,9 +87,30 @@ $ frontfy generate page about
 ```
 
 When generating a new page it is created in *src/views/site*. The page is created using the [EJS](https://ejs.co/) template.
- A new route to this page is created and added to the express router. So if you generate a page called "about", you'll already be able to access it in your browser. 
- 
-Example: http://localhost:3301/about.
+ A new route to this page is created and added to the express router. So if you generate a page called "about", you'll already be able to access it in your browser. Example: http://localhost:3301/about.
+
+## Configuration
+
+### OAuth Consumer
+
+Create a new OAuth Consumer on Bitbucket. 
+Access BitBucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. Inside the page set: name, callback URL to: http://localhost:3301/oauth-callback and give permission to Repositories (Write and Admin). Save and go ahead!
+
+### Configuration file (.env)
+
+Access the .env file inside the /config folder. Open it and configure the following properties:
+
+| Key | Value (default) | Description |
+| --- |:-------:|-------------|
+| NODE_ENV | development | Controls the project environment, the values can be development or production|
+| VUE_DEV | true | Controls the browser VueJS plugin |
+| PORT | 8080 | Server port |
+| REDIS_HOST | 127.0.0.1 | IP address of the Redis server |
+| REDIS_PASSWORD | null | If set, client will run Redis auth command on connect.  |
+| REDIS_PORT | 6379 | Port of the Redis server |
+| MAIL_SENDER  | null | When an error occurs in the application an email is sent, put here the sender's email. |
+| MAIL_SENDER_PW  | null | The sender's password |
+| MAIL_RECEIVER  | null | Put here the receiver e-mail |
 
 License
 ----
