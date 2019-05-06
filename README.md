@@ -1,6 +1,6 @@
 # Frontfy CLI
 
-**Frontfy-cli** aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.
+**Frontfy-cli** aims to generate a new [Frontfy](https://github.com/owfrontend/frontfy) project already configured and with the possibility of creating pages, components and directives.
 
 ## Installation
 
@@ -93,8 +93,15 @@ When generating a new page it is created in *src/views/site*. The page is create
 
 ### OAuth Consumer
 
-Create a new OAuth Consumer on Bitbucket. 
-Access BitBucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. Inside the page set: name, callback URL to: http://localhost:3301/oauth-callback and give permission to Repositories (Write and Admin). Save and go ahead!
+For create a new repository it is necessary create an OAuth Consumer on Bitbucket. Access BitBucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. It is necessary to fill in the following fields:
+
+| Label | Value |
+| ---- |-------|
+| Name | frontfy |
+| Callback URL | http://localhost:3301/oauth-callback |
+| Permissions | Repositories (write and admin) |
+
+Save and go ahead!
 
 ### Configuration file (.env)
 
