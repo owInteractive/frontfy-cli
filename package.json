@@ -1,0 +1,44 @@
+{
+  "name": "frontfy-cli",
+  "version": "1.0.1",
+  "description": "Frontfy is a structure for front-end projects. Make with Node.js, Express, Redis and Vue. This CLI aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.",
+  "main": "index.js",
+  "bin": {
+    "frontfy": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "front-end",
+    "frontfy",
+    "base",
+    "scaffold",
+    "project",
+    "node",
+    "nodejs",
+    "express",
+    "redis",
+    "vue",
+    "cli"
+  ],
+  "author": "OW Front-end <frontend@owinteractive.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "common-tags": "^1.8.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "inquirer": "^6.3.1",
+    "log-symbols": "^3.0.0",
+    "open": "^6.2.0",
+    "ora": "^3.4.0",
+    "querystring": "^0.2.0"
+  },
+  "engines": {
+    "node": ">=8.15.1"
+  }
+}
