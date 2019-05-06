@@ -11,7 +11,7 @@ $ npm i -g frontfy-cli
 ## Usage
 
 ```sh
-frontfy [command]
+frontfy <command>
 ```
 
 ## Commands
