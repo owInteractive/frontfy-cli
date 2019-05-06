@@ -1,6 +1,6 @@
 {
   "name": "frontfy-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Frontfy-cli aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.",
   "main": "index.js",
   "bin": {
@@ -23,6 +23,10 @@
     "cli"
   ],
   "author": "OW Front-end <frontend@owinteractive.com>",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/owfrontend/frontfy-cli.git"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
