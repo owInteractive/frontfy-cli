@@ -1,45 +1,98 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Frontfy CLI
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+**Frontfy-cli** aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## Installation
 
----
+```sh
+$ npm i -g frontfy-cli
+```
 
-## Edit a file
+## Usage
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+```sh
+frontfy [command]
+```
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+## Commands
 
----
+Commands currently available:
 
-## Create a file
+### Init
 
-Next, you’ll add a new file to this repository.
+> The init command is used to create a new, clean and configured Frontfy project.
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+```sh
+$ frontfy init
+```
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+The init method contains some questions after calling:
 
----
+#### Questions about the project
 
-## Clone a repository
+| Question | Description |
+| ------------- |-----|
+| How would you like to name the project? | This command has a prefix **front.** and a suffix **.com.br**. So if the input is "example" the result for this question is **front.example.com.br** |
+| What technology do you want to use? | The choices are [NodeJS](https://github.com/owfrontend/frontfy) or [PHP](https://github.com/owfrontend/frontfy-php) |
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+#### Questions about the repository
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+| Question | Description |
+| ------------- |-----|
+| Do you like to create a repository in Bitbucket? | Y/n |
+| Who is the owner of the project? | Project owner on Bitbucket |
+| Enter with your key and secret: | To authorize the repository creation at Bitbucket we need your OAuth Key/Secret. If you don't have one go to Bitbucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. Inside the page set: name, callback URL to: http://localhost:3301/oauth-callback and give permission to Repositories (Write and Admin). Save and go ahead! |
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+#### Run the project
+| Question | Description |
+| ------------- |-----|
+| Do you like to run the project? | (Y/n) |
+
+### Generate
+
+> The generate command is used to generate a new component, directive or page.
+
+```sh
+$ frontfy generate
+```
+
+or 
+
+```sh
+$ frontfy generate <type> <name>
+```
+
+The first example will have some questions, such as what you want to generate and the name of the item being generated. The second example is a syntax sugar for the first. You will already pass the type (component, directive or page) and the name of the item directly.
+
+#### Component
+
+When generating a component the same is created inside *src/assets/js/components*.
+
+```sh
+$ frontfy generate component Message
+```
+
+#### Directive
+
+When generating a directive it is created in *src/assets/js/directives*.
+
+```sh
+$ frontfy generate directive dateConvert
+```
+
+#### Page
+
+When generating a new page it is created in *src/views/site*.
+
+```sh
+$ frontfy generate page about
+```
+
+ A new route to this page is created and added to the express router. So if you generate a page called "about", you'll already be able to access it in your browser. 
+ 
+Example: http://localhost:3301/about.
+
+License
+----
+
+[MIT](http://opensource.org/licenses/MIT)
