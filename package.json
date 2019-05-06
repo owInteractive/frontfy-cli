@@ -1,7 +1,7 @@
 {
   "name": "frontfy-cli",
   "version": "1.0.1",
-  "description": "Frontfy is a structure for front-end projects. Make with Node.js, Express, Redis and Vue. This CLI aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.",
+  "description": "Frontfy-cli aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.",
   "main": "index.js",
   "bin": {
     "frontfy": "./index.js"
