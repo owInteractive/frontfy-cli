@@ -50,7 +50,7 @@ The init method contains some questions after calling:
 
 ### Generate
 
-> The generate command is used to generate a new component, directive or page.
+> The generate command is used to generate a new component, directive or page. This commands only works in the NodeJS project for now.
 
 ```sh
 $ frontfy generate
@@ -66,28 +66,27 @@ The first example will have some questions, such as what you want to generate an
 
 #### Component
 
-When generating a component the same is created inside *src/assets/js/components*.
-
 ```sh
 $ frontfy generate component Message
 ```
 
-#### Directive
+When generating a component the same is created inside *src/assets/js/components*.
 
-When generating a directive it is created in *src/assets/js/directives*.
+#### Directive
 
 ```sh
 $ frontfy generate directive dateConvert
 ```
 
-#### Page
+When generating a directive it is created in *src/assets/js/directives*.
 
-When generating a new page it is created in *src/views/site*.
+#### Page
 
 ```sh
 $ frontfy generate page about
 ```
 
+When generating a new page it is created in *src/views/site*. The page is created using the [EJS](https://ejs.co/) template.
  A new route to this page is created and added to the express router. So if you generate a page called "about", you'll already be able to access it in your browser. 
  
 Example: http://localhost:3301/about.
