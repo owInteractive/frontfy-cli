@@ -2,17 +2,20 @@
 
 **Frontfy-cli** aims to generate a new [Frontfy](https://github.com/owfrontend/frontfy) project already configured and with the possibility of creating pages, components and directives.
 
+
 ## Installation
 
 ```sh
 $ npm i -g frontfy-cli
 ```
 
+
 ## Usage
 
 ```sh
 frontfy <command>
 ```
+
 
 ## Commands
 
@@ -89,6 +92,7 @@ $ frontfy generate page about
 When generating a new page it is created in *src/views/site*. The page is created using the [EJS](https://ejs.co/) template.
  A new route to this page is created and added to the express router. So if you generate a page called "about", you'll already be able to access it in your browser. Example: http://localhost:3301/about.
 
+
 ## Configuration
 
 ### OAuth Consumer
@@ -118,6 +122,13 @@ Access the .env file inside the /config folder. Open it and configure the follow
 | MAIL_SENDER  | null | When an error occurs in the application an email is sent, put here the sender's email. |
 | MAIL_SENDER_PW  | null | The sender's password |
 | MAIL_RECEIVER  | null | Put here the receiver e-mail |
+
+
+### Panel
+
+The project contains a Redis administration panel. To enter access http://localhost:3301/panel/auth, access with these temporary credentials (below we will see that it will be necessary to generate a project in Firebase for your application).
+
+Writing...
 
 License
 ----
