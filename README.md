@@ -78,7 +78,7 @@ When generating a component the same is created inside *src/assets/js/components
 #### Directive
 
 ```sh
-$ frontfy generate directive dateConvert
+$ frontfy generate directive date-convert
 ```
 
 When generating a directive it is created in *src/assets/js/directives*.
@@ -95,7 +95,9 @@ When generating a new page it is created in *src/views/site*. The page is create
 
 ## Configuration
 
-### OAuth Consumer
+### Frontfy CLI configurations
+
+##### Use the CLI to publish your project - OAuth Consumer
 
 For create a new repository it is necessary create an OAuth Consumer on Bitbucket. Access BitBucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. It is necessary to fill in the following fields:
 
@@ -107,7 +109,9 @@ For create a new repository it is necessary create an OAuth Consumer on Bitbucke
 
 Save and go ahead!
 
-### Configuration file (.env)
+### Frontfy configurations
+
+##### Configuration file (config/.env)
 
 Access the .env file inside the /config folder. Open it and configure the following properties:
 
@@ -123,12 +127,9 @@ Access the .env file inside the /config folder. Open it and configure the follow
 | MAIL_SENDER_PW  | null | The sender's password |
 | MAIL_RECEIVER  | null | Put here the receiver e-mail |
 
+##### Panel Authentication
 
-### Panel
-
-The project contains a Redis administration panel. To enter access http://localhost:3301/panel/auth, access with these temporary credentials (below we will see that it will be necessary to generate a project in Firebase for your application).
-
-Writing...
+The project contains a Redis administration panel. To access this panel you must have a [Firebase Authentication](https://firebase.google.com/docs/auth) user and password. Create a new project in Firebase, inside the Frontfy Project access the file *src/assets/js/services/firebase/config.js* and configure with your exclusive Firebase API Configuration.
 
 License
 ----
