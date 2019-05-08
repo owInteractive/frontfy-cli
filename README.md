@@ -69,6 +69,8 @@ The first example will have some questions, such as what you want to generate an
 
 #### Component
 
+Run the command above:
+
 ```sh
 $ frontfy generate component Message
 ```
@@ -77,6 +79,8 @@ When generating a component the same is created inside *src/assets/js/components
 
 #### Directive
 
+Run the command above:
+
 ```sh
 $ frontfy generate directive date-convert
 ```
@@ -84,6 +88,8 @@ $ frontfy generate directive date-convert
 When generating a directive it is created in *src/assets/js/directives*.
 
 #### Page
+
+Run the command above:
 
 ```sh
 $ frontfy generate page about
@@ -95,9 +101,9 @@ When generating a new page it is created in *src/views/site*. The page is create
 
 ## Configuration
 
-### Frontfy CLI configurations
+### Frontfy CLI
 
-##### Use the CLI to publish your project - OAuth Consumer
+#### Use the CLI to publish your project - OAuth Consumer
 
 For create a new repository it is necessary create an OAuth Consumer on Bitbucket. Access BitBucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. It is necessary to fill in the following fields:
 
@@ -109,9 +115,9 @@ For create a new repository it is necessary create an OAuth Consumer on Bitbucke
 
 Save and go ahead!
 
-### Frontfy configurations
+### Frontfy
 
-##### Configuration file (config/.env)
+#### Configuration file (config/.env)
 
 Access the .env file inside the /config folder. Open it and configure the following properties:
 
@@ -127,7 +133,7 @@ Access the .env file inside the /config folder. Open it and configure the follow
 | MAIL_SENDER_PW  | null | The sender's password |
 | MAIL_RECEIVER  | null | Put here the receiver e-mail |
 
-##### Panel Authentication
+#### Panel Authentication
 
 The project contains a Redis administration panel. To access this panel you must have a [Firebase Authentication](https://firebase.google.com/docs/auth) user and password. Create a new project in Firebase, inside the Frontfy Project access the file *src/assets/js/services/firebase/config.js* and configure with your exclusive Firebase API Configuration.
 
