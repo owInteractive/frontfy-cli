@@ -1,6 +1,6 @@
 {
   "name": "frontfy-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Frontfy-cli aims to generate a new Frontfy Project already configured and with the possibility of creating pages, components and directives.",
   "main": "index.js",
   "bin": {
