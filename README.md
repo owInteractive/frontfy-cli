@@ -5,7 +5,7 @@
 
 ## Installation
 
-Prerequisites: Node.js (>=8.15), npm version 3+ and Git.
+Prerequisites: Node.js (>=8.x), npm version 3+ and Git.
 
 ```sh
 $ npm i -g frontfy-cli
