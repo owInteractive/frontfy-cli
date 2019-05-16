@@ -25,7 +25,7 @@
   "author": "OW Front-end <frontend@owinteractive.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/owfrontend/frontfy-cli.git"
+    "url": "https://github.com/owInteractive/frontfy-cli"
   },
   "license": "MIT",
   "dependencies": {

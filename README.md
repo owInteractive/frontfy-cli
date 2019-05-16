@@ -1,6 +1,6 @@
 # Frontfy CLI
 
-**Frontfy-cli** aims to generate a new [Frontfy](https://github.com/owfrontend/frontfy) project already configured and with the possibility of creating pages, components and directives.
+**Frontfy-cli** aims to generate a new [Frontfy](https://github.com/owInteractive/frontfy) project already configured and with the possibility of creating pages, components and directives.
 
 
 ## Installation
@@ -38,7 +38,7 @@ The init method contains some questions after calling:
 | Question | Description |
 | ------------- |-----|
 | How would you like to name the project? | This command has a prefix **front.** and a suffix **.com.br**. So if the input is "example" the result for this question is **front.example.com.br** |
-| What technology do you want to use? | The choices are [NodeJS](https://github.com/owfrontend/frontfy) or [PHP](https://github.com/owfrontend/frontfy-php) |
+| What technology do you want to use? | The choices are [NodeJS](https://github.com/owInteractive/frontfy) or [PHP](https://github.com/owInteractive/frontfy-php) |
 
 #### Questions about the repository
 
@@ -117,7 +117,7 @@ Save and go ahead!
 
 ### Frontfy configurations
 
-See the documentation in [Frontfy repository](https://github.com/owfrontend/frontfy).
+See the documentation in [Frontfy repository](https://github.com/owInteractive/frontfy).
 
 License
 ----
