@@ -44,9 +44,10 @@ The init method contains some questions after calling:
 
 | Question | Description |
 | ------------- |-----|
-| Do you like to create a repository in Bitbucket? | Y/n |
-| Who is the owner of the project? | Project owner on Bitbucket. Default is *owinteractive* the owner of Frontfy. |
-| Enter with your key and secret: | To authorize the repository creation at Bitbucket we need your OAuth Key/Secret. See more in the section **Configuration -  OAuth Consumer**. |
+| Do you like to create a repository? | The choices are Bitbucket, Github or None. |
+| Enter with your Client ID/Key: | To authorize the repository creation at Bitbucket we need your OAuth Client ID/Key. See more in the section **Configuration - OAuth authentication**. |
+| Enter with your Client Secret: | To authorize the repository creation at Bitbucket we need your OAuth Client Secret. See more in the section **Configuration - OAuth authentication**. |
+| Who is the owner of the project? (Only in Bitbucket) | Project owner on Bitbucket. Default is *owinteractive* the owner of Frontfy. |
 
 #### Run the project
 | Question | Description |
@@ -103,17 +104,36 @@ When generating a new page it is created in *src/views/site*. The page is create
 
 ## Configuration
 
-### OAuth Consumer
+### OAuth authentication
 
-For create a new repository it is necessary create an OAuth Consumer on Bitbucket. Access BitBucket -> Settings -> OAuth -> OAuth Consumers -> Add consumer. It is necessary to fill in the following fields:
+#### Bitbucket
 
-| Label | Value |
-| ---- |-------|
-| Name | frontfy |
-| Callback URL | http://localhost:3301/oauth-callback |
-| Permissions | Repositories (write and admin) |
+To authorize the Bitbucket we need your OAuth Client Key and Client Secret. Follow the steps below: 
 
-Save and go ahead!
+1) If you don't have one go to Bitbucket (https://bitbucket.org); 
+2) Click on your profile picture; 
+3) Click on Bitbucket settings; 
+4) Click on OAuth; 
+5) Click on Add consumer; 
+6) Fill the fields: 
+    * Name: frontfy 
+    * Callback URL: http://localhost:3301/oauth-callback 
+    * Permissions: check repositories options write and admin 
+7) Click on Save to get your key and secret.
+
+#### Github
+To authorize the Github we need your OAuth Client ID and Client Secret. Follow the steps below: 
+
+1) If you don't have one go to Github (https://github.com); 
+2) Click on your profile picture; 
+3) Click on Settings; 
+4) Click on Developer Settings; 
+5) Click on Register a new aplication; 
+6) Fill the fields: 
+    * Application name: frontfy 
+    * Homepage URL: http://localhost:3301
+    * Authorization callback URL: http://localhost:3301/oauth-callback 
+7) Click on Register application to get your key and secret.
 
 ### Frontfy configurations
 
