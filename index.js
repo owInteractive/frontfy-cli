@@ -1,36 +1,42 @@
 #!/usr/bin/env node
+
 'use strict';
 
 /**
-* Imports
-*/
+ * Imports
+ */
 const commander = require('commander');
 const init = require('./lib/questions/init');
 const generate = require('./lib/questions/generate');
+const alerts = require('./lib/helpers/alerts');
+const cmd = require('child_process');
 
 /**
-* Server port
-*/
+ * Server port
+ */
 process.env.PORT = 3301;
 
 /**
-* Commander version and description
-*/
+ * Commander version and description
+ */
 commander
 	.version('1.0.0')
-	.description('FRONTFY - Command-line interface');
+	.description('Command-line interface to init a new Frontfy Project and more!')
+	.usage('[command]');
 
 /**
-* Commander init method
-*/
+ * Commander init method
+ */
 commander
 	.command('init')
 	.alias('i')
-	.description('init a new project')
+	.description('Init a new Frontfy Project')
 	.action(async () => {
 
 		// Questions about project 
-		const { name } = await init.questionsAboutProject();
+		const {
+			name
+		} = await init.questionsAboutProject();
 
 		// Questions about repository
 		await init.questionsAboutRepository(name);
@@ -41,15 +47,28 @@ commander
 	});
 
 /**
-* Commander generate method
-*/
+ * Commander generate method
+ */
 commander
 	.command('generate [type] [name]')
 	.alias('g')
-	.description('generate page or component (only for projects in NodeJS')
+	.description('Generate page, components or directives')
 	.action((type, name) => generate.question(type, name));
 
 /**
-* Commander launch
-*/
+ * Commander method doesn't exist
+ */
+commander
+	.command('*')
+	.action((args) => {
+
+		console.log(`The '${args}' method does not exist in this application. See the command --help below: \n`);
+
+		cmd.exec('frontfy -h', (error, stdout, stderr) => console.log(stdout));
+
+	});
+
+/**
+ * Commander launcher
+ */
 commander.parse(process.argv);
