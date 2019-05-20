@@ -8,7 +8,6 @@
 const commander = require('commander');
 const init = require('./lib/questions/init');
 const generate = require('./lib/questions/generate');
-const alerts = require('./lib/helpers/alerts');
 const cmd = require('child_process');
 
 /**
