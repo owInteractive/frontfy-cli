@@ -110,7 +110,7 @@ When generating a new page it is created in *src/views/site*. The page is create
 
 To authorize the Bitbucket we need your OAuth Client Key and Client Secret. Follow the steps below: 
 
-1) If you don't have one go to Bitbucket (https://bitbucket.org); 
+1) Go to Bitbucket (https://bitbucket.org); 
 2) Click on your profile picture; 
 3) Click on Bitbucket settings; 
 4) Click on OAuth; 
@@ -124,7 +124,7 @@ To authorize the Bitbucket we need your OAuth Client Key and Client Secret. Foll
 #### Github
 To authorize the Github we need your OAuth Client ID and Client Secret. Follow the steps below: 
 
-1) If you don't have one go to Github (https://github.com); 
+1) Go to Github (https://github.com); 
 2) Click on your profile picture; 
 3) Click on Settings; 
 4) Click on Developer Settings; 
